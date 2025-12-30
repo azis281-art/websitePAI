@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Hukum Nun Mati dan Tanwin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f8f5ff;
+        }
+        .arabic {
+            font-family: 'Traditional Arabic', 'Scheherazade New', serif;
+            font-size: 1.5em;
+            line-height: 2;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .quiz-option:hover {
+            background-color: #e9d5ff;
+        }
+        .quiz-option.selected {
+            background-color: #d8b4fe;
+            border-color: #a855f7;
+        }
+        .quiz-option.correct {
+            background-color: #bbf7d0;
+            border-color: #22c55e;
+        }
+        .quiz-option.incorrect {
+            background-color: #fecaca;
+            border-color: #ef4444;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-4 px-6 shadow-lg">
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+                <h1 class="text-2xl md:text-3xl font-bold">Belajar Hukum Nun Mati dan Tanwin</h1>
+                <p class="text-sm md:text-base">Pendidikan Agama Islam Kelas 7</p>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white shadow-md">
+            <div class="container mx-auto px-4">
+                <div class="flex overflow-x-auto py-3 space-x-4" id="nav-tabs">
+                    <button class="nav-tab px-4 py-2 font-semibold rounded-lg bg-purple-600 text-white" data-target="intro">Pengantar</button>
+                    <button class="nav-tab px-4 py-2 font-semibold rounded-lg hover:bg-purple-100" data-target="idzhar">Idzhar</button>
+                    <button class="nav-tab px-4 py-2 font-semibold rounded-lg hover:bg-purple-100" data-target="idgham">Idgham</button>
+                    <button class="nav-tab px-4 py-2 font-semibold rounded-lg hover:bg-purple-100" data-target="iqlab">Iqlab</button>
+                    <button class="nav-tab px-4 py-2 font-semibold rounded-lg hover:bg-purple-100" data-target="ikhfa">Ikhfa</button>
+                    <button class="nav-tab px-4 py-2 font-semibold rounded-lg hover:bg-purple-100" data-target="quiz">Kuis</button>
+                    <button class="nav-tab px-4 py-2 font-semibold rounded-lg hover:bg-purple-100" data-target="game">Permainan</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 py-8">
+            <!-- Introduction Section -->
+            <section id="intro" class="content-section fade-in">
+                <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-purple-800 mb-4">Pengantar Hukum Nun Mati dan Tanwin</h2>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-2/3">
+                            <p class="mb-4">Hukum Nun Mati (نْ) dan Tanwin (ــًــٍــٌ) adalah salah satu aturan penting dalam membaca Al-Qur'an. Memahami hukum ini akan membantu kita membaca Al-Qur'an dengan benar dan fasih.</p>
+                            <p class="mb-4"><strong>Nun Mati (نْ)</strong> adalah huruf nun yang bertanda sukun (ْ).</p>
+                            <p class="mb-4"><strong>Tanwin</strong> adalah bunyi nun mati di akhir kata yang ditandai dengan harakat ganda (fathatain ــً, kasratain ــٍ, atau dammatain ــٌ).</p>
+                            <p class="mb-4">Ketika nun mati atau tanwin bertemu dengan huruf hijaiyah, terdapat 4 hukum bacaan yang berlaku:</p>
+                            <ul class="list-disc pl-6 mb-4">
+                                <li class="mb-2"><strong class="text-purple-700">Idzhar</strong> - dibaca jelas</li>
+                                <li class="mb-2"><strong class="text-purple-700">Idgham</strong> - dimasukkan/dilebur</li>
+                                <li class="mb-2"><strong class="text-purple-700">Iqlab</strong> - diubah menjadi mim</li>
+                                <li class="mb-2"><strong class="text-purple-700">Ikhfa</strong> - dibaca samar</li>
+                            </ul>
+                        </div>
+                        <div class="md:w-1/3 bg-purple-50 rounded-lg p-4">
+                            <h3 class="font-bold text-purple-700 mb-2">Tahukah Kamu?</h3>
+                            <p class="text-sm">Mempelajari hukum nun mati dan tanwin sangat penting karena kesalahan dalam membacanya dapat mengubah makna dari ayat Al-Qur'an.</p>
+                            <div class="mt-4 p-3 bg-white rounded-lg shadow-sm">
+                                <p class="text-center text-sm font-semibold text-purple-800">Klik pada menu di atas untuk mempelajari setiap hukum bacaan secara detail!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-white rounded-xl shadow-md p-5 transition-all duration-300 card-hover border-t-4 border-yellow-500">
+                        <h3 class="font-bold text-lg text-yellow-600 mb-2">Idzhar</h3>
+                        <p class="text-sm">Dibaca jelas ketika nun mati/tanwin bertemu huruf tenggorokan (ء ه ع ح غ خ)</p>
+                        <div class="arabic text-center mt-3 text-yellow-800">مَنْ ءَامَنَ</div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md p-5 transition-all duration-300 card-hover border-t-4 border-green-500">
+                        <h3 class="font-bold text-lg text-green-600 mb-2">Idgham</h3>
+                        <p class="text-sm">Dilebur ketika nun mati/tanwin bertemu huruf (ي ن م و ل ر)</p>
+                        <div class="arabic text-center mt-3 text-green-800">مِنْ نُّورٍ</div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md p-5 transition-all duration-300 card-hover border-t-4 border-blue-500">
+                        <h3 class="font-bold text-lg text-blue-600 mb-2">Iqlab</h3>
+                        <p class="text-sm">Diubah menjadi mim ketika nun mati/tanwin bertemu huruf ba (ب)</p>
+                        <div class="arabic text-center mt-3 text-blue-800">مِنْ بَعْدِ</div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md p-5 transition-all duration-300 card-hover border-t-4 border-purple-500">
+                        <h3 class="font-bold text-lg text-purple-600 mb-2">Ikhfa</h3>
+                        <p class="text-sm">Dibaca samar ketika nun mati/tanwin bertemu 15 huruf hijaiyah lainnya</p>
+                        <div class="arabic text-center mt-3 text-purple-800">مِنْ قَبْلِ</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Idzhar Section -->
+            <section id="idzhar" class="content-section hidden">
+                <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-yellow-600 mb-4">Hukum Idzhar (الإظهار)</h2>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-2/3">
+                            <p class="mb-4"><strong>Idzhar</strong> secara bahasa berarti jelas. Dalam ilmu tajwid, idzhar adalah membaca nun mati atau tanwin dengan jelas tanpa dengung ketika bertemu dengan huruf-huruf halqi (tenggorokan).</p>
+                            <p class="mb-4">Huruf-huruf halqi ada 6, yaitu:</p>
+                            <div class="arabic text-center bg-yellow-50 p-4 rounded-lg mb-4 text-yellow-800">
+                                ء - ه - ع - ح - غ - خ
+                            </div>
+                            <p class="mb-4">Cara membacanya adalah dengan membunyikan nun mati atau tanwin dengan jelas tanpa dengung.</p>
+                            
+                            <h3 class="font-bold text-lg text-yellow-700 mt-6 mb-3">Contoh Bacaan Idzhar:</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-yellow-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold mb-1">Nun Mati + ء (Hamzah)</p>
+                                    <div class="arabic text-yellow-800">مَنْ ءَامَنَ</div>
+                                    <p class="text-xs text-gray-600">Dibaca: man āmana</p>
+                                </div>
+                                <div class="bg-yellow-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold mb-1">Nun Mati + ه (Ha)</p>
+                                    <div class="arabic text-yellow-800">مِنْ هَادٍ</div>
+                                    <p class="text-xs text-gray-600">Dibaca: min hādin</p>
+                                </div>
+                                <div class="bg-yellow-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold mb-1">Tanwin + ع (Ain)</p>
+                                    <div class="arabic text-yellow-800">عَلِيمٌ عَظِيمٌ</div>
+                                    <p class="text-xs text-gray-600">Dibaca: 'alīmun 'aẓīmun</p>
+                                </div>
+                                <div class="bg-yellow-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold mb-1">Tanwin + ح (Ha)</p>
+                                    <div class="arabic text-yellow-800">غَفُورٌ حَلِيمٌ</div>
+                                    <p class="text-xs text-gray-600">Dibaca: ghafūrun ḥalīmun</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/3">
+                            <div class="bg-yellow-100 rounded-lg p-4 mb-4">
+                                <h3 class="font-bold text-yellow-800 mb-2">Cara Mengingat</h3>
+                                <p class="text-sm">Huruf idzhar adalah huruf yang keluar dari tenggorokan (halqi). Untuk mengingatnya, kamu bisa menggunakan kata kunci:</p>
+                                <p class="font-bold text-center my-2 text-yellow-700">"AHa KHa GHa 'Ain Ha'"</p>
+                            </div>
+                            
+                            <div class="bg-white border border-yellow-200 rounded-lg p-4 shadow-sm">
+                                <h3 class="font-bold text-yellow-700 mb-2">Latihan Cepat</h3>
+                                <p class="text-sm mb-3">Identifikasi apakah bacaan berikut termasuk idzhar:</p>
+                                
+                                <div class="mb-2 p-2 bg-yellow-50 rounded">
+                                    <p class="arabic text-center">مِنْ خَيْرٍ</p>
+                                    <div class="flex justify-between mt-2">
+                                        <button class="text-xs bg-white px-3 py-1 rounded border hover:bg-yellow-200 idzhar-check" data-answer="true">Idzhar</button>
+                                        <button class="text-xs bg-white px-3 py-1 rounded border hover:bg-yellow-200 idzhar-check" data-answer="false">Bukan Idzhar</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-2 p-2 bg-yellow-50 rounded">
+                                    <p class="arabic text-center">مِنْ بَعْدِ</p>
+                                    <div class="flex justify-between mt-2">
+                                        <button class="text-xs bg-white px-3 py-1 rounded border hover:bg-yellow-200 idzhar-check" data-answer="false">Idzhar</button>
+                                        <button class="text-xs bg-white px-3 py-1 rounded border hover:bg-yellow-200 idzhar-check" data-answer="true">Bukan Idzhar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Idgham Section -->
+            <section id="idgham" class="content-section hidden">
+                <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-green-600 mb-4">Hukum Idgham (الإدغام)</h2>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-2/3">
+                            <p class="mb-4"><strong>Idgham</strong> secara bahasa berarti memasukkan atau melebur. Dalam ilmu tajwid, idgham adalah meleburkan suara nun mati atau tanwin ke dalam huruf berikutnya sehingga nun mati atau tanwin tidak terdengar lagi.</p>
+                            <p class="mb-4">Idgham terbagi menjadi dua:</p>
+                            
+                            <div class="mb-6">
+                                <h3 class="font-bold text-lg text-green-700 mb-3">1. Idgham Bighunnah (dengan dengung)</h3>
+                                <p class="mb-2">Terjadi ketika nun mati atau tanwin bertemu dengan 4 huruf:</p>
+                                <div class="arabic text-center bg-green-50 p-4 rounded-lg mb-4 text-green-800">
+                                    ي - ن - م - و
+                                </div>
+                                <p class="mb-2">Cara membacanya adalah dengan meleburkan suara nun mati atau tanwin ke dalam huruf berikutnya dengan dengung.</p>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                    <div class="bg-green-50 p-3 rounded-lg">
+                                        <p class="text-sm font-semibold mb-1">Nun Mati + ي (Ya)</p>
+                                        <div class="arabic text-green-800">مَنْ يَّقُولُ</div>
+                                        <p class="text-xs text-gray-600">Dibaca: may-yaqūlu</p>
+                                    </div>
+                                    <div class="bg-green-50 p-3 rounded-lg">
+                                        <p class="text-sm font-semibold mb-1">Tanwin + ن (Nun)</p>
+                                        <div class="arabic text-green-800">غَفُورٌ نَّرَحِيمٌ</div>
+                                        <p class="text-xs text-gray-600">Dibaca: ghafūrun-naraḥīmun</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-bold text-lg text-green-700 mb-3">2. Idgham Bilaghunnah (tanpa dengung)</h3>
+                                <p class="mb-2">Terjadi ketika nun mati atau tanwin bertemu dengan 2 huruf:</p>
+                                <div class="arabic text-center bg-green-50 p-4 rounded-lg mb-4 text-green-800">
+                                    ل - ر
+                                </div>
+                                <p class="mb-2">Cara membacanya adalah dengan meleburkan suara nun mati atau tanwin ke dalam huruf berikutnya tanpa dengung.</p>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                    <div class="bg-green-50 p-3 rounded-lg">
+                                        <p class="text-sm font-semibold mb-1">Nun Mati + ل (Lam)</p>
+                                        <div class="arabic text-green-800">مِنْ لَّدُنْهُ</div>
+                                        <p class="text-xs text-gray-600">Dibaca: mil-ladunhu</p>
+                                    </div>
+                                    <div class="bg-green-50 p-3 rounded-lg">
+                                        <p class="text-sm font-semibold mb-1">Tanwin + ر (Ra)</p>
+                                        <div class="arabic text-green-800">غَفُورٌ رَّحِيمٌ</div>
+                                        <p class="text-xs text-gray-600">Dibaca: ghafūrur-raḥīmun</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/3">
+                            <div class="bg-green-100 rounded-lg p-4 mb-4">
+                                <h3 class="font-bold text-green-800 mb-2">Cara Mengingat</h3>
+                                <p class="text-sm">Untuk mengingat huruf idgham bighunnah, gunakan kata kunci:</p>
+                                <p class="font-bold text-center my-2 text-green-700">"YANMU" (Ya, Nun, Mim, Wau)</p>
+                                <p class="text-sm mt-3">Untuk idgham bilaghunnah:</p>
+                                <p class="font-bold text-center my-2 text-green-700">"LARO" (Lam, Ra)</p>
+                            </div>
+                            
+                            <div class="bg-white border border-green-200 rounded-lg p-4 shadow-sm">
+                                <h3 class="font-bold text-green-700 mb-2">Latihan Cepat</h3>
+                                <p class="text-sm mb-3">Identifikasi jenis idgham berikut:</p>
+                                
+                                <div class="mb-2 p-2 bg-green-50 rounded">
+                                    <p class="arabic text-center">مِنْ مَّالٍ</p>
+                                    <div class="flex justify-between mt-2">
+                                        <button class="text-xs bg-white px-3 py-1 rounded border hover:bg-green-200 idgham-check" data-answer="bighunnah">Bighunnah</button>
+                                        <button class="text-xs bg-white px-3 py-1 rounded border hover:bg-green-200 idgham-check" data-answer="bilaghunnah">Bilaghunnah</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-2 p-2 bg-green-50 rounded">
+                                    <p class="arabic text-center">مِنْ رَّبِّهِمْ</p>
+                                    <div class="flex justify-between mt-2">
+                                        <button class="text-xs bg-white px-3 py-1 rounded border hover:bg-green-200 idgham-check" data-answer="bilaghunnah">Bighunnah</button>
+                                        <button class="text-xs bg-white px-3 py-1 rounded border hover:bg-green-200 idgham-check" data-answer="bighunnah">Bilaghunnah</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Iqlab Section -->
+            <section id="iqlab" class="content-section hidden">
+                <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-blue-600 mb-4">Hukum Iqlab (الإقلاب)</h2>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-2/3">
+                            <p class="mb-4"><strong>Iqlab</strong> secara bahasa berarti mengubah atau mengganti. Dalam ilmu tajwid, iqlab adalah mengubah suara nun mati atau tanwin menjadi suara mim (م) ketika bertemu dengan huruf ba (ب).</p>
+                            <p class="mb-4">Huruf iqlab hanya ada satu, yaitu:</p>
+                            <div class="arabic text-center bg-blue-50 p-4 rounded-lg mb-4 text-blue-800 text-4xl">
+                                ب
+                            </div>
+                            <p class="mb-4">Cara membacanya adalah dengan mengubah suara nun mati atau tanwin menjadi mim, disertai dengan dengung.</p>
+                            
+                            <h3 class="font-bold text-lg text-blue-700 mt-6 mb-3">Contoh Bacaan Iqlab:</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-blue-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold mb-1">Nun Mati + ب (Ba)</p>
+                                    <div class="arabic text-blue-800">مِنْ بَعْدِ</div>
+                                    <p class="text-xs text-gray-600">Dibaca: mim ba'di</p>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold mb-1">Tanwin + ب (Ba)</p>
+                                    <div class="arabic text-blue-800">سَمِيعٌ بَصِيرٌ</div>
+                                    <p class="text-xs text-gray-600">Dibaca: samī'um baṣīrun</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 bg-blue-50 p-4 rounded-lg">
+                                <h3 class="font-bold text-blue-700 mb-2">Cara Membaca Iqlab</h3>
+                                <ol class="list-decimal pl-5 space-y-2">
+                                    <li>Bibir terkatup seperti mengucapkan huruf mim</li>
+                                    <li>Suara keluar dari hidung (dengung)</li>
+                                    <li>Lama dengung kira-kira 2 harakat (ketukan)</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="md:w-1/3">
+                            <div class="bg-blue-100 rounded-lg p-4 mb-4">
+                                <h3 class="font-bold text-blue-800 mb-2">Tahukah Kamu?</h3>
+                                <p class="text-sm">Iqlab adalah hukum bacaan yang paling mudah diingat karena hanya memiliki satu huruf yaitu Ba (ب).</p>
+                                <p class="text-sm mt-3">Ketika membaca iqlab, bibir kita akan terkatup seperti mengucapkan huruf mim, namun nun mati atau tanwin tetap ditulis dalam mushaf Al-Qur'an.</p>
+                            </div>
+                            
+                            <div class="bg-white border border-blue-200 rounded-lg p-4 shadow-sm">
+                                <h3 class="font-bold text-blue-700 mb-2">Latihan Cepat</h3>
+                                <p class="text-sm mb-3">Identifikasi apakah bacaan berikut termasuk iqlab:</p>
+                                
+                                <div class="mb-2 p-2 bg-blue-50 rounded">
+                                    <p class="arabic text-center">عَلِيمٌ بِذَاتِ</p>
+                                    <div class="flex justify-between mt-2">
+                                        <button class="text-xs bg-white px-3 py-1 rounded border hover:bg-blue-200 iqlab-check" data-answer="true">Iqlab</button>
+                                        <button class="text-xs bg-white px-3 py-1 rounded border hover:bg-blue-200 iqlab-check" data-answer="false">Bukan Iqlab</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-2 p-2 bg-blue-50 rounded">
+                                    <p class="arabic text-center">مِنْ تَحْتِهَا</p>
+                                    <div class="flex justify-between mt-2">
+                                        <button class="text-xs bg-white px-3 py-1 rounded border hover:bg-blue-200 iqlab-check" data-answer="false">Iqlab</button>
+                                        <button class="text-xs bg-white px-3 py-1 rounded border hover:bg-blue-200 iqlab-check" data-answer="true">Bukan Iqlab</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-4 p-3 bg-blue-100 rounded-lg text-center">
+                                    <p class="text-sm font-semibold text-blue-800">Ingat: Iqlab hanya terjadi saat nun mati atau tanwin bertemu huruf Ba (ب)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ikhfa Section -->
+            <section id="ikhfa" class="content-section hidden">
+                <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-purple-600 mb-4">Hukum Ikhfa (الإخفاء)</h2>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-2/3">
+                            <p class="mb-4"><strong>Ikhfa</strong> secara bahasa berarti menyembunyikan atau menyamarkan. Dalam ilmu tajwid, ikhfa adalah membaca nun mati atau tanwin dengan samar, antara izhar dan idgham, disertai dengung.</p>
+                            <p class="mb-4">Huruf ikhfa ada 15, yaitu:</p>
+                            <div class="arabic text-center bg-purple-50 p-4 rounded-lg mb-4 text-purple-800">
+                                ت - ث - ج - د - ذ - ز - س - ش - ص - ض - ط - ظ - ف - ق - ك
+                            </div>
+                            <p class="mb-4">Cara membacanya adalah dengan menyamarkan suara nun mati atau tanwin, tidak terlalu jelas dan tidak terlalu lebur, disertai dengung.</p>
+                            
+                            <h3 class="font-bold text-lg text-purple-700 mt-6 mb-3">Contoh Bacaan Ikhfa:</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-purple-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold mb-1">Nun Mati + ت (Ta)</p>
+                                    <div class="arabic text-purple-800">مِنْ تَحْتِهَا</div>
+                                    <p class="text-xs text-gray-600">Dibaca: min taḥtihā (samar)</p>
+                                </div>
+                                <div class="bg-purple-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold mb-1">Tanwin + ق (Qaf)</p>
+                                    <div class="arabic text-purple-800">خَلْقٌ قَدِيرٌ</div>
+                                    <p class="text-xs text-gray-600">Dibaca: khalqun qadīrun (samar)</p>
+                                </div>
+                                <div class="bg-purple-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold mb-1">Nun Mati + ك (Kaf)</p>
+                                    <div class="arabic text-purple-800">إِنْ كُنْتُمْ</div>
+                                    <p class="text-xs text-gray-600">Dibaca: in kuntum (samar)</p>
+                                </div>
+                                <div class="bg-purple-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold mb-1">Tanwin + ش (Syin)</p>
+                                    <div class="arabic text-purple-800">عَذَابٌ شَدِيدٌ</div>
+                                    <p class="text-xs text-gray-600">Dibaca: 'adhābun shadīdun (samar)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/3">
+                            <div class="bg-purple-100 rounded-lg p-4 mb-4">
+                                <h3 class="font-bold text-purple-800 mb-2">Cara Mengingat</h3>
+                                <p class="text-sm">Huruf ikhfa adalah semua huruf hijaiyah selain huruf idzhar (6 huruf), idgham (6 huruf), dan iqlab (1 huruf).</p>
+                                <p class="text-sm mt-3">Untuk mengingat 15 huruf ikhfa, kamu bisa menggunakan syair:</p>
+                                <p class="font-bold text-center my-2 text-purple-700 text-sm">"صِفْ ذَا ثَنَا كَمْ جَادَ شَخْصٌ قَدْ سَمَا * دُمْ طَيِّبًا زِدْ فِي تُقًى ضَعْ ظَالِمًا"</p>
+                            </div>
+                            
+                            <div class="bg-white border border-purple-200 rounded-lg p-4 shadow-sm">
+                                <h3 class="font-bold text-purple-700 mb-2">Latihan Cepat</h3>
+                                <p class="text-sm mb-3">Identifikasi apakah bacaan berikut termasuk ikhfa:</p>
+                                
+                                <div class="mb-2 p-2 bg-purple-50 rounded">
+                                    <p class="arabic text-center">مِنْ شَرِّ</p>
+                                    <div class="flex justify-between mt-2">
+                                        <button class="text-xs bg-white px-3 py-1 rounded border hover:bg-purple-200 ikhfa-check" data-answer="true">Ikhfa</button>
+                                        <button class="text-xs bg-white px-3 py-1 rounded border hover:bg-purple-200 ikhfa-check" data-answer="false">Bukan Ikhfa</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-2 p-2 bg-purple-50 rounded">
+                                    <p class="arabic text-center">مِنْ نَّارٍ</p>
+                                    <div class="flex justify-between mt-2">
+                                        <button class="text-xs bg-white px-3 py-1 rounded border hover:bg-purple-200 ikhfa-check" data-answer="false">Ikhfa</button>
+                                        <button class="text-xs bg-white px-3 py-1 rounded border hover:bg-purple-200 ikhfa-check" data-answer="true">Bukan Ikhfa</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4 bg-purple-50 p-4 rounded-lg">
+                                <h3 class="font-bold text-purple-700 mb-2">Tips Membaca Ikhfa</h3>
+                                <ul class="list-disc pl-5 text-sm space-y-1">
+                                    <li>Posisi lidah berada di antara izhar dan idgham</li>
+                                    <li>Suara keluar dari hidung (dengung)</li>
+                                    <li>Lama dengung kira-kira 2 harakat</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quiz Section -->
+            <section id="quiz" class="content-section hidden">
+                <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-indigo-600 mb-4">Kuis Hukum Nun Mati dan Tanwin</h2>
+                    <p class="mb-6">Uji pemahamanmu tentang hukum nun mati dan tanwin dengan menjawab pertanyaan-pertanyaan berikut:</p>
+                    
+                    <div id="quiz-container">
+                        <div class="quiz-progress mb-4">
+                            <div class="h-2 w-full bg-gray-200 rounded-full">
+                                <div id="quiz-progress-bar" class="h-2 bg-indigo-600 rounded-full" style="width: 0%"></div>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-600 mt-1">
+                                <span>Soal: <span id="current-question">0</span>/<span id="total-questions">0</span></span>
+                                <span>Skor: <span id="quiz-score">0</span></span>
+                            </div>
+                        </div>
+                        
+                        <div id="quiz-question-container" class="mb-6 p-4 bg-indigo-50 rounded-lg">
+                            <h3 id="quiz-question" class="font-bold text-lg text-indigo-800 mb-3">Pertanyaan akan muncul di sini</h3>
+                            <div id="quiz-options" class="space-y-3">
+                                <!-- Options will be inserted here -->
+                            </div>
+                        </div>
+                        
+                        <div id="quiz-feedback" class="mb-6 p-4 rounded-lg hidden">
+                            <!-- Feedback will be inserted here -->
+                        </div>
+                        
+                        <div class="flex justify-between">
+                            <button id="quiz-start" class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">Mulai Kuis</button>
+                            <button id="quiz-next" class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors hidden">Soal Berikutnya</button>
+                            <button id="quiz-finish" class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors hidden">Selesai</button>
+                        </div>
+                    </div>
+                    
+                    <div id="quiz-result" class="hidden">
+                        <div class="text-center p-6 bg-indigo-50 rounded-lg">
+                            <h3 class="text-2xl font-bold text-indigo-800 mb-3">Hasil Kuis</h3>
+                            <p class="text-lg mb-2">Skor Akhir: <span id="final-score" class="font-bold text-indigo-600">0</span> dari <span id="max-score">0</span></p>
+                            <p id="result-message" class="mb-4"></p>
+                            <button id="quiz-restart" class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">Ulangi Kuis</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Game Section -->
+            <section id="game" class="content-section hidden">
+                <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-pink-600 mb-4">Permainan Mencocokkan Hukum Bacaan</h2>
+                    <p class="mb-6">Cocokkan contoh bacaan dengan hukum bacaan yang benar. Seret contoh bacaan ke kotak hukum bacaan yang sesuai.</p>
+                    
+                    <div id="game-container">
+                        <div class="flex flex-col md:flex-row gap-6 mb-6">
+                            <div class="md:w-1/2">
+                                <h3 class="font-bold text-lg text-pink-700 mb-3">Contoh Bacaan</h3>
+                                <div id="examples-container" class="space-y-2">
+                                    <!-- Examples will be inserted here -->
+                                </div>
+                            </div>
+                            <div class="md:w-1/2">
+                                <h3 class="font-bold text-lg text-pink-700 mb-3">Hukum Bacaan</h3>
+                                <div class="space-y-4">
+                                    <div id="idzhar-drop" class="p-4 bg-yellow-100 border-2 border-dashed border-yellow-400 rounded-lg min-h-[100px]">
+                                        <h4 class="font-bold text-yellow-700 mb-2">Idzhar</h4>
+                                        <div class="examples-dropped space-y-2"></div>
+                                    </div>
+                                    <div id="idgham-drop" class="p-4 bg-green-100 border-2 border-dashed border-green-400 rounded-lg min-h-[100px]">
+                                        <h4 class="font-bold text-green-700 mb-2">Idgham</h4>
+                                        <div class="examples-dropped space-y-2"></div>
+                                    </div>
+                                    <div id="iqlab-drop" class="p-4 bg-blue-100 border-2 border-dashed border-blue-400 rounded-lg min-h-[100px]">
+                                        <h4 class="font-bold text-blue-700 mb-2">Iqlab</h4>
+                                        <div class="examples-dropped space-y-2"></div>
+                                    </div>
+                                    <div id="ikhfa-drop" class="p-4 bg-purple-100 border-2 border-dashed border-purple-400 rounded-lg min-h-[100px]">
+                                        <h4 class="font-bold text-purple-700 mb-2">Ikhfa</h4>
+                                        <div class="examples-dropped space-y-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between">
+                            <button id="game-start" class="px-6 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors">Mulai Permainan</button>
+                            <button id="game-check" class="px-6 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors hidden">Periksa Jawaban</button>
+                            <button id="game-restart" class="px-6 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors hidden">Main Lagi</button>
+                        </div>
+                        
+                        <div id="game-result" class="mt-6 p-4 rounded-lg hidden">
+                            <!-- Result will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-6">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold mb-2">Media Pembelajaran Interaktif</h3>
+                        <p class="text-gray-300">Hukum Nun Mati dan Tanwin - Pendidikan Agama Islam Kelas 7</p>
+                    </div>
+                    <div class="text-center md:text-right">
+                        <p class="text-gray-300 mb-2">© 2026 Media Pembelajaran PAI</p>
+                        <p class="text-sm text-gray-400">Dibuat untuk meningkatkan pemahaman siswa</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Navigation Tabs
+        document.addEventListener('DOMContentLoaded', function() {
+            const navTabs = document.querySelectorAll('.nav-tab');
+            const contentSections = document.querySelectorAll('.content-section');
+            
+            // Show intro section by default
+            document.getElementById('intro').classList.remove('hidden');
+            
+            navTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    navTabs.forEach(t => {
+                        t.classList.remove('bg-purple-600', 'text-white');
+                        t.classList.add('hover:bg-purple-100');
+                    });
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('bg-purple-600', 'text-white');
+                    this.classList.remove('hover:bg-purple-100');
+                    
+                    // Hide all content sections
+                    contentSections.forEach(section => {
+                        section.classList.add('hidden');
+                    });
+                    
+                    // Show the corresponding content section
+                    const targetId = this.getAttribute('data-target');
+                    document.getElementById(targetId).classList.remove('hidden');
+                    document.getElementById(targetId).classList.add('fade-in');
+                });
+            });
+            
+            // Idzhar check
+            const idzharChecks = document.querySelectorAll('.idzhar-check');
+            idzharChecks.forEach(button => {
+                button.addEventListener('click', function() {
+                    const isCorrect = this.getAttribute('data-answer') === 'true';
+                    const buttons = this.parentElement.querySelectorAll('button');
+                    
+                    buttons.forEach(btn => {
+                        btn.disabled = true;
+                        btn.classList.remove('hover:bg-yellow-200');
+                    });
+                    
+                    if (isCorrect) {
+                        this.classList.add('bg-green-200', 'border-green-500');
+                    } else {
+                        this.classList.add('bg-red-200', 'border-red-500');
+                        buttons.forEach(btn => {
+                            if (btn.getAttribute('data-answer') === 'true') {
+                                btn.classList.add('bg-green-200', 'border-green-500');
+                            }
+                        });
+                    }
+                });
+            });
+            
+            // Idgham check
+            const idghamChecks = document.querySelectorAll('.idgham-check');
+            idghamChecks.forEach(button => {
+                button.addEventListener('click', function() {
+                    const correctAnswer = this.getAttribute('data-answer');
+                    const buttons = this.parentElement.querySelectorAll('button');
+                    
+                    buttons.forEach(btn => {
+                        btn.disabled = true;
+                        btn.classList.remove('hover:bg-green-200');
+                    });
+                    
+                    if (correctAnswer === 'bighunnah' && this.textContent === 'Bighunnah' || 
+                        correctAnswer === 'bilaghunnah' && this.textContent === 'Bilaghunnah') {
+                        this.classList.add('bg-green-200', 'border-green-500');
+                    } else {
+                        this.classList.add('bg-red-200', 'border-red-500');
+                        buttons.forEach(btn => {
+                            if ((correctAnswer === 'bighunnah' && btn.textContent === 'Bighunnah') || 
+                                (correctAnswer === 'bilaghunnah' && btn.textContent === 'Bilaghunnah')) {
+                                btn.classList.add('bg-green-200', 'border-green-500');
+                            }
+                        });
+                    }
+                });
+            });
+            
+            // Iqlab check
+            const iqlabChecks = document.querySelectorAll('.iqlab-check');
+            iqlabChecks.forEach(button => {
+                button.addEventListener('click', function() {
+                    const isCorrect = this.getAttribute('data-answer') === 'true';
+                    const buttons = this.parentElement.querySelectorAll('button');
+                    
+                    buttons.forEach(btn => {
+                        btn.disabled = true;
+                        btn.classList.remove('hover:bg-blue-200');
+                    });
+                    
+                    if (isCorrect) {
+                        this.classList.add('bg-green-200', 'border-green-500');
+                    } else {
+                        this.classList.add('bg-red-200', 'border-red-500');
+                        buttons.forEach(btn => {
+                            if (btn.getAttribute('data-answer') === 'true') {
+                                btn.classList.add('bg-green-200', 'border-green-500');
+                            }
+                        });
+                    }
+                });
+            });
+            
+            // Ikhfa check
+            const ikhfaChecks = document.querySelectorAll('.ikhfa-check');
+            ikhfaChecks.forEach(button => {
+                button.addEventListener('click', function() {
+                    const isCorrect = this.getAttribute('data-answer') === 'true';
+                    const buttons = this.parentElement.querySelectorAll('button');
+                    
+                    buttons.forEach(btn => {
+                        btn.disabled = true;
+                        btn.classList.remove('hover:bg-purple-200');
+                    });
+                    
+                    if (isCorrect) {
+                        this.classList.add('bg-green-200', 'border-green-500');
+                    } else {
+                        this.classList.add('bg-red-200', 'border-red-500');
+                        buttons.forEach(btn => {
+                            if (btn.getAttribute('data-answer') === 'true') {
+                                btn.classList.add('bg-green-200', 'border-green-500');
+                            }
+                        });
+                    }
+                });
+            });
+            
+            // Quiz functionality
+            const quizQuestions = [
+                {
+                    question: "Apa yang dimaksud dengan hukum Idzhar?",
+                    options: [
+                        "Membaca nun mati atau tanwin dengan jelas",
+                        "Mengubah nun mati atau tanwin menjadi mim",
+                        "Menyamarkan nun mati atau tanwin",
+                        "Meleburkan nun mati atau tanwin"
+                    ],
+                    answer: 0
+                },
+                {
+                    question: "Huruf apa saja yang termasuk huruf Idzhar?",
+                    options: [
+                        "ي ن م و ل ر",
+                        "ء ه ع ح غ خ",
+                        "ب",
+                        "ت ث ج د ذ ز س ش ص ض ط ظ ف ق ك"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "Ketika nun mati bertemu dengan huruf ba (ب), hukum bacaan apa yang berlaku?",
+                    options: [
+                        "Idzhar",
+                        "Idgham",
+                        "Iqlab",
+                        "Ikhfa"
+                    ],
+                    answer: 2
+                },
+                {
+                    question: "Huruf apa saja yang termasuk huruf Idgham Bighunnah?",
+                    options: [
+                        "ل ر",
+                        "ء ه ع ح غ خ",
+                        "ي ن م و",
+                        "ب"
+                    ],
+                    answer: 2
+                },
+                {
+                    question: "Contoh bacaan مِنْ قَبْلِ termasuk hukum bacaan apa?",
+                    options: [
+                        "Idzhar",
+                        "Idgham",
+                        "Iqlab",
+                        "Ikhfa"
+                    ],
+                    answer: 3
+                },
+                {
+                    question: "Berapa jumlah huruf Ikhfa?",
+                    options: [
+                        "6 huruf",
+                        "2 huruf",
+                        "1 huruf",
+                        "15 huruf"
+                    ],
+                    answer: 3
+                },
+                {
+                    question: "Contoh bacaan مِنْ رَّبِّهِمْ termasuk hukum bacaan apa?",
+                    options: [
+                        "Idzhar",
+                        "Idgham Bilaghunnah",
+                        "Idgham Bighunnah",
+                        "Ikhfa"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "Apa yang dimaksud dengan Tanwin?",
+                    options: [
+                        "Huruf nun yang bertanda sukun",
+                        "Bunyi nun mati di akhir kata yang ditandai dengan harakat ganda",
+                        "Huruf mim yang bertanda sukun",
+                        "Huruf ba yang bertanda sukun"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "Contoh bacaan مَنْ ءَامَنَ termasuk hukum bacaan apa?",
+                    options: [
+                        "Idzhar",
+                        "Idgham",
+                        "Iqlab",
+                        "Ikhfa"
+                    ],
+                    answer: 0
+                },
+                {
+                    question: "Bagaimana cara membaca Iqlab?",
+                    options: [
+                        "Dibaca jelas tanpa dengung",
+                        "Dilebur dengan dengung",
+                        "Diubah menjadi mim dengan dengung",
+                        "Dibaca samar dengan dengung"
+                    ],
+                    answer: 2
+                }
+            ];
+            
+            let currentQuestion = 0;
+            let score = 0;
+            let quizStarted = false;
+            
+            const quizStartBtn = document.getElementById('quiz-start');
+            const quizNextBtn = document.getElementById('quiz-next');
+            const quizFinishBtn = document.getElementById('quiz-finish');
+            const quizRestartBtn = document.getElementById('quiz-restart');
+            const quizQuestionContainer = document.getElementById('quiz-question-container');
+            const quizQuestion = document.getElementById('quiz-question');
+            const quizOptions = document.getElementById('quiz-options');
+            const quizFeedback = document.getElementById('quiz-feedback');
+            const quizResult = document.getElementById('quiz-result');
+            const currentQuestionEl = document.getElementById('current-question');
+            const totalQuestionsEl = document.getElementById('total-questions');
+            const quizScoreEl = document.getElementById('quiz-score');
+            const finalScoreEl = document.getElementById('final-score');
+            const maxScoreEl = document.getElementById('max-score');
+            const resultMessageEl = document.getElementById('result-message');
+            const quizProgressBar = document.getElementById('quiz-progress-bar');
+            
+            totalQuestionsEl.textContent = quizQuestions.length;
+            maxScoreEl.textContent = quizQuestions.length;
+            
+            quizStartBtn.addEventListener('click', startQuiz);
+            quizNextBtn.addEventListener('click', nextQuestion);
+            quizFinishBtn.addEventListener('click', showResult);
+            quizRestartBtn.addEventListener('click', restartQuiz);
+            
+            function startQuiz() {
+                quizStarted = true;
+                quizStartBtn.classList.add('hidden');
+                quizNextBtn.classList.remove('hidden');
+                loadQuestion();
+            }
+            
+            function loadQuestion() {
+                const question = quizQuestions[currentQuestion];
+                quizQuestion.textContent = question.question;
+                quizOptions.innerHTML = '';
+                
+                question.options.forEach((option, index) => {
+                    const optionEl = document.createElement('div');
+                    optionEl.classList.add('quiz-option', 'p-3', 'bg-white', 'border', 'border-gray-300', 'rounded-lg', 'cursor-pointer', 'transition-colors');
+                    optionEl.textContent = option;
+                    optionEl.dataset.index = index;
+                    optionEl.addEventListener('click', checkAnswer);
+                    quizOptions.appendChild(optionEl);
+                });
+                
+                currentQuestionEl.textContent = currentQuestion + 1;
+                quizProgressBar.style.width = `${((currentQuestion + 1) / quizQuestions.length) * 100}%`;
+                quizFeedback.classList.add('hidden');
+                
+                if (currentQuestion === quizQuestions.length - 1) {
+                    quizNextBtn.classList.add('hidden');
+                    quizFinishBtn.classList.remove('hidden');
+                }
+            }
+            
+            function checkAnswer(e) {
+                const selectedOption = e.target;
+                const selectedAnswer = parseInt(selectedOption.dataset.index);
+                const correctAnswer = quizQuestions[currentQuestion].answer;
+                
+                const options = document.querySelectorAll('.quiz-option');
+                options.forEach(option => {
+                    option.classList.add('selected');
+                    option.removeEventListener('click', checkAnswer);
+                });
+                
+                if (selectedAnswer === correctAnswer) {
+                    selectedOption.classList.add('correct');
+                    quizFeedback.innerHTML = '<div class="bg-green-100 text-green-800 p-3 rounded-lg"><p class="font-bold">Benar!</p><p>Jawaban kamu tepat.</p></div>';
+                    score++;
+                    quizScoreEl.textContent = score;
+                } else {
+                    selectedOption.classList.add('incorrect');
+                    options[correctAnswer].classList.add('correct');
+                    quizFeedback.innerHTML = '<div class="bg-red-100 text-red-800 p-3 rounded-lg"><p class="font-bold">Salah!</p><p>Jawaban yang benar telah ditandai.</p></div>';
+                }
+                
+                quizFeedback.classList.remove('hidden');
+            }
+            
+            function nextQuestion() {
+                if (!quizStarted) return;
+                
+                currentQuestion++;
+                if (currentQuestion < quizQuestions.length) {
+                    loadQuestion();
+                } else {
+                    showResult();
+                }
+            }
+            
+            function showResult() {
+                quizQuestionContainer.classList.add('hidden');
+                quizFeedback.classList.add('hidden');
+                quizNextBtn.classList.add('hidden');
+                quizFinishBtn.classList.add('hidden');
+                quizResult.classList.remove('hidden');
+                
+                finalScoreEl.textContent = score;
+                
+                let message = '';
+                const percentage = (score / quizQuestions.length) * 100;
+                
+                if (percentage >= 90) {
+                    message = 'Luar biasa! Kamu menguasai materi dengan sangat baik!';
+                } else if (percentage >= 70) {
+                    message = 'Bagus! Kamu memahami sebagian besar materi.';
+                } else if (percentage >= 50) {
+                    message = 'Cukup baik. Teruslah belajar untuk meningkatkan pemahamanmu.';
+                } else {
+                    message = 'Jangan menyerah! Coba pelajari lagi materinya dan ulangi kuis ini.';
+                }
+                
+                resultMessageEl.textContent = message;
+            }
+            
+            function restartQuiz() {
+                currentQuestion = 0;
+                score = 0;
+                quizStarted = false;
+                quizScoreEl.textContent = '0';
+                quizResult.classList.add('hidden');
+                quizQuestionContainer.classList.remove('hidden');
+                quizStartBtn.classList.remove('hidden');
+                quizProgressBar.style.width = '0%';
+            }
+            
+            // Game functionality
+            const gameExamples = [
+                { text: "مِنْ خَيْرٍ", type: "idzhar" },
+                { text: "مَنْ ءَامَنَ", type: "idzhar" },
+                { text: "مِنْ هَادٍ", type: "idzhar" },
+                { text: "مِنْ يَّوْمِئِذٍ", type: "idgham" },
+                { text: "مِنْ نُّورٍ", type: "idgham" },
+                { text: "مِنْ رَّبِّهِمْ", type: "idgham" },
+                { text: "مِنْ بَعْدِ", type: "iqlab" },
+                { text: "عَلِيمٌ بِذَاتِ", type: "iqlab" },
+                { text: "مِنْ تَحْتِهَا", type: "ikhfa" },
+                { text: "مِنْ شَرِّ", type: "ikhfa" },
+                { text: "مِنْ قَبْلِ", type: "ikhfa" },
+                { text: "مِنْ كُلِّ", type: "ikhfa" }
+            ];
+            
+            let gameStarted = false;
+            let draggedItem = null;
+            
+            const gameStartBtn = document.getElementById('game-start');
+            const gameCheckBtn = document.getElementById('game-check');
+            const gameRestartBtn = document.getElementById('game-restart');
+            const examplesContainer = document.getElementById('examples-container');
+            const gameResult = document.getElementById('game-result');
+            const dropZones = document.querySelectorAll('[id$="-drop"]');
+            
+            gameStartBtn.addEventListener('click', startGame);
+            gameCheckBtn.addEventListener('click', checkGame);
+            gameRestartBtn.addEventListener('click', restartGame);
+            
+            function startGame() {
+                gameStarted = true;
+                gameStartBtn.classList.add('hidden');
+                gameCheckBtn.classList.remove('hidden');
+                gameResult.classList.add('hidden');
+                
+                // Shuffle examples
+                const shuffledExamples = [...gameExamples].sort(() => Math.random() - 0.5);
+                
+                // Create draggable examples
+                examplesContainer.innerHTML = '';
+                shuffledExamples.forEach((example, index) => {
+                    const exampleEl = document.createElement('div');
+                    exampleEl.classList.add('p-3', 'bg-white', 'border', 'border-gray-300', 'rounded-lg', 'cursor-move', 'example-item');
+                    exampleEl.setAttribute('draggable', 'true');
+                    exampleEl.dataset.type = example.type;
+                    exampleEl.dataset.index = index;
+                    exampleEl.innerHTML = `<p class="arabic text-center">${example.text}</p>`;
+                    
+                    exampleEl.addEventListener('dragstart', dragStart);
+                    exampleEl.addEventListener('dragend', dragEnd);
+                    
+                    examplesContainer.appendChild(exampleEl);
+                });
+                
+                // Clear drop zones
+                dropZones.forEach(zone => {
+                    const container = zone.querySelector('.examples-dropped');
+                    container.innerHTML = '';
+                    
+                    zone.addEventListener('dragover', dragOver);
+                    zone.addEventListener('dragenter', dragEnter);
+                    zone.addEventListener('dragleave', dragLeave);
+                    zone.addEventListener('drop', drop);
+                });
+            }
+            
+            function dragStart() {
+                draggedItem = this;
+                setTimeout(() => this.style.opacity = '0.5', 0);
+            }
+            
+            function dragEnd() {
+                draggedItem = null;
+                this.style.opacity = '1';
+            }
+            
+            function dragOver(e) {
+                e.preventDefault();
+            }
+            
+            function dragEnter(e) {
+                e.preventDefault();
+                this.classList.add('border-solid');
+            }
+            
+            function dragLeave() {
+                this.classList.remove('border-solid');
+            }
+            
+            function drop() {
+                this.classList.remove('border-solid');
+                const container = this.querySelector('.examples-dropped');
+                
+                if (draggedItem) {
+                    container.appendChild(draggedItem);
+                }
+            }
+            
+            function checkGame() {
+                let correct = 0;
+                let total = 0;
+                
+                dropZones.forEach(zone => {
+                    const zoneType = zone.id.split('-')[0]; // idzhar, idgham, iqlab, ikhfa
+                    const examples = zone.querySelectorAll('.example-item');
+                    
+                    examples.forEach(example => {
+                        total++;
+                        const exampleType = example.dataset.type;
+                        
+                        if (exampleType === zoneType) {
+                            example.classList.add('border-green-500', 'bg-green-50');
+                            correct++;
+                        } else {
+                            example.classList.add('border-red-500', 'bg-red-50');
+                        }
+                    });
+                });
+                
+                gameCheckBtn.classList.add('hidden');
+                gameRestartBtn.classList.remove('hidden');
+                
+                let resultMessage = '';
+                const percentage = total > 0 ? (correct / total) * 100 : 0;
+                
+                if (percentage === 100) {
+                    resultMessage = '<div class="bg-green-100 text-green-800 p-4 rounded-lg"><p class="font-bold">Sempurna!</p><p>Kamu berhasil mencocokkan semua contoh dengan benar!</p></div>';
+                } else if (percentage >= 70) {
+                    resultMessage = `<div class="bg-yellow-100 text-yellow-800 p-4 rounded-lg"><p class="font-bold">Hampir Sempurna!</p><p>Kamu berhasil mencocokkan ${correct} dari ${total} contoh dengan benar.</p></div>`;
+                } else {
+                    resultMessage = `<div class="bg-red-100 text-red-800 p-4 rounded-lg"><p class="font-bold">Terus Berlatih!</p><p>Kamu berhasil mencocokkan ${correct} dari ${total} contoh dengan benar. Coba lagi untuk meningkatkan pemahamanmu.</p></div>`;
+                }
+                
+                gameResult.innerHTML = resultMessage;
+                gameResult.classList.remove('hidden');
+            }
+            
+            function restartGame() {
+                gameRestartBtn.classList.add('hidden');
+                startGame();
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99e5af8a563b0557',t:'MTc2MzExNDY3Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
